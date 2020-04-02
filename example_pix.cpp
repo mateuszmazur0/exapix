@@ -23,7 +23,7 @@ u64 getDivFraction(u64 a, u64 b)
 // Returns (value^p) % m
 u64 getPowerModulo(u64 value, u64 p, u64 m)
 {
-    u128 result = 1;
+    u128 result = 1 % m;
     for(u64 i = 0; i < p; i++)
         result = (result * value) % m;
 
